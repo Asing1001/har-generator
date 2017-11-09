@@ -1,8 +1,11 @@
 {
   "name": "har-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "schedule generate har file",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Asing1001/har-generator"
+  },
   "dependencies": {
     "chrome-har-capturer": "^0.10.3",
     "moment": "^2.19.1"

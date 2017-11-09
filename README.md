@@ -1,5 +1,7 @@
 # HAR Generator
 
+[![npm version](https://badge.fury.io/js/har-generator.svg)](https://badge.fury.io/js/har-generator)
+
 This project help you create simple job for saving har by headless chrome.
 
 ## Requirements
