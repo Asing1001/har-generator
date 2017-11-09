@@ -1,6 +1,6 @@
 {
   "name": "har-generator",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "schedule generate har file",
   "main": "index.js",
   "dependencies": {
@@ -8,7 +8,7 @@
     "moment": "^2.19.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node task.js"
   },
   "devDependencies": {},
   "keywords": [

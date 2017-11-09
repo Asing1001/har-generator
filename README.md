@@ -1,5 +1,11 @@
 # HAR Generator
 
+This project help you create simple job for saving har by headless chrome.
+
+## Requirements
+
+[NodeJs 8.0 up](https://nodejs.org/en/download/)
+
 ## Getting Start
 
 ### Install package
