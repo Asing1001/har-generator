@@ -1,6 +1,6 @@
 {
   "name": "har-generator",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "description": "schedule generate har file",
   "main": "index.js",
   "dependencies": {
