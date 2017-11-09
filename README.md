@@ -12,10 +12,11 @@ npm install
 
 Go to [config.js](config.js) to change configuration.
 
-`url`: target url for har,
-`harFolder`: destination for saving har files,
-`prettify`: default `false`, set to `true` for human read,
-`jobInterval`: interval in minute for trigger next run
+- `Tasks`: it is an array, you could add more task to run in parallel
+- `url`: target url for har
+- `harFolder`: destination for saving har files
+- `prettify`: default `false`, set to `true` for human read
+- `jobInterval`: interval in minute for trigger next run
 
 ### Start Program
 
