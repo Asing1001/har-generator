@@ -1,0 +1,19 @@
+{
+  "name": "har-generator",
+  "version": "1.0.0",
+  "description": "schedule generate har file",
+  "main": "index.js",
+  "dependencies": {
+    "chrome-har-capturer": "^0.10.3",
+    "moment": "^2.19.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "har"
+  ],
+  "author": "andy",
+  "license": "MIT"
+}
