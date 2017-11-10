@@ -31,3 +31,15 @@ Go to [config.js](config.js) to change configuration.
 ```bash
 npm start
 ```
+
+## Example
+
+```javascript
+const { tasks } = require('./config');
+const HarGenerator = require('./harGenerator');
+
+tasks.forEach(options => {
+    const harGen = new HarGenerator(options);
+    harGen.start();
+})
+```
