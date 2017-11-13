@@ -3,7 +3,7 @@ const { requestUrls, indentJson, jobInterval, harFolder } = require('./config');
 const moment = require('moment');
 const { ensureDir } = require('./util');
 const fs = require('fs');
-require('isomorphic-fetch');
+const http = require('http');
 
 module.exports = class HarGenerator {
     constructor({ url, prettify, jobInterval, harFolder }) {
@@ -11,6 +11,7 @@ module.exports = class HarGenerator {
         this.prettify = prettify
         this.harFolder = harFolder
         this.jobInterval = jobInterval
+        this.ip = ''
     }
 
     async start() {
@@ -39,9 +40,17 @@ module.exports = class HarGenerator {
         });
     }
 
-    async getMyIp(){
-        const res = await fetch('http://bot.whatismyipaddress.com')
-        const ip = await res.text();
-        return ip;
+    async getMyIp() {
+        let ip = '';
+        return new Promise(resolve => {
+            http.get('http://bot.whatismyipaddress.com', res => {
+                res.on('data', chunk => ip += chunk);
+                res.on('error', err => {
+                    console.log(`can not get ip, error: ${err} `);
+                    resolve('not available')
+                });
+                res.on('end', () => resolve(ip));
+            })
+        })
     }
 }

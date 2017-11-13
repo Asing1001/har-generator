@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "chrome-har-capturer": "^0.10.3",
-    "isomorphic-fetch": "^2.2.1",
     "moment": "^2.19.1"
   },
   "scripts": {
