@@ -19,10 +19,10 @@ npm install har-generator
 ### Example
 
 ```javascript
-const HarGenerator = require('harGenerator');
+const HarGenerator = require('har-generator');
 const options = {
-    url: 'https://www.188bet.co.uk/',
-    harFolder: 'normal',
+    url: 'https://github.com/Asing1001/har-generator',
+    harFolder: 'dist',
     prettify: false,
     jobInterval: 1
 }
@@ -37,3 +37,12 @@ harGen.start();
 - `harFolder`: destination for saving har files
 - `prettify`: default `false`, set to `true` for human read
 - `jobInterval`: interval in minute for trigger next run
+
+### Others
+
+- If chrome memory high or could not connect
+
+```javascript
+const { cleanup } = require('./lib/harGenerator');
+cleanup()
+```

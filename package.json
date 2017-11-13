@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node ./example/test.js",
     "test": "node ./example/test.js",
-    "clean": "node ./clean.js"
+    "clean": "node ./example/clean.js"
   },
   "devDependencies": {},
   "keywords": [
