@@ -3,7 +3,7 @@ const { requestUrls, indentJson, jobInterval, harFolder } = require('./config');
 const moment = require('moment');
 const { ensureDir } = require('./util');
 const fs = require('fs');
-
+require('isomorphic-fetch');
 
 module.exports = class HarGenerator {
     constructor({ url, prettify, jobInterval, harFolder }) {
@@ -13,7 +13,9 @@ module.exports = class HarGenerator {
         this.jobInterval = jobInterval
     }
 
-    start() {
+    async start() {
+        this.ip = await this.getMyIp();
+        console.log(`Current externalip : ${this.ip}`);
         ensureDir(this.harFolder);
         this.fetchHar(this.url);
         setInterval(() => this.fetchHar(this.url), this.jobInterval * 60 * 1000)
@@ -28,11 +30,18 @@ module.exports = class HarGenerator {
     }
 
     saveHar(har) {
+        har.ip = this.ip;
         const json = JSON.stringify(har, null, this.prettify ? 2 : 0);
-        const dateFileName = `${this.harFolder}/${moment().format('MM-DD_HH-MM-SS')}.json`;
+        const dateFileName = `${this.harFolder}/${moment().format('MM-DD_HH-MM-ss')}.json`;
         fs.writeFile(dateFileName, json, (err) => {
             if (err) console.error(err)
             console.log(`complete save har to ${dateFileName}`)
         });
+    }
+
+    async getMyIp(){
+        const res = await fetch('http://bot.whatismyipaddress.com')
+        const ip = await res.text();
+        return ip;
     }
 }
