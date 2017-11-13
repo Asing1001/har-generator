@@ -1,1 +1,1 @@
-module.exports = require('./harGenerator');
+module.exports = require('./lib/harGenerator');

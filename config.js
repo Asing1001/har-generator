@@ -8,7 +8,7 @@ module.exports = {
     {
         url: 'https://www.188bet.com/',
         harFolder: 'nogtm',
-        prettify: false,
+        prettify: true,
         jobInterval: 1
     }]
 }
