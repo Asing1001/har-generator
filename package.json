@@ -1,6 +1,6 @@
 {
   "name": "har-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "schedule generate har file",
   "main": "index.js",
   "repository": {
@@ -13,9 +13,9 @@
     "winston-daily-rotate-file": "^1.7.2"
   },
   "scripts": {
-    "start": "node test.js",
-    "test": "node test.js",
-    "clean": "node clean.js"
+    "start": "node ./example/test.js",
+    "test": "node ./example/test.js",
+    "clean": "node ./clean.js"
   },
   "devDependencies": {},
   "keywords": [

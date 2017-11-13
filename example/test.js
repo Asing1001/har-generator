@@ -1,5 +1,5 @@
 const { tasks } = require('./config');
-const HarGenerator = require('.');
+const HarGenerator = require('../index');
 
 tasks.forEach(options => {
     const harGen = new HarGenerator(options);

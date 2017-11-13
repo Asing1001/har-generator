@@ -1,3 +1,3 @@
-const { runChromeHeadless, killChrome } = require('./lib/command');
+const { cleanup } = require('./lib/harGenerator');
 
-killChrome().then(runChromeHeadless)
+cleanup()

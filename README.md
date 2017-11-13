@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/har-generator.svg)](https://badge.fury.io/js/har-generator)
 
-This project help you create simple job for saving har by headless chrome.
+Simple har scrapper by headless chrome
 
 ## Requirements
 
@@ -13,33 +13,27 @@ This project help you create simple job for saving har by headless chrome.
 ### Install package
 
 ```bash
-npm install
+npm install har-generator
 ```
 
-### Modify Configuration
+### Example
 
-Go to [config.js](config.js) to change configuration.
+```javascript
+const HarGenerator = require('./harGenerator');
+const options = {
+    url: 'https://www.188bet.co.uk/',
+    harFolder: 'normal',
+    prettify: false,
+    jobInterval: 1
+}
+const harGen = new HarGenerator(options);
+harGen.start();
+```
+
+### Options
 
 - `Tasks`: it is an array, you could add more task to run in parallel
 - `url`: target url for har
 - `harFolder`: destination for saving har files
 - `prettify`: default `false`, set to `true` for human read
 - `jobInterval`: interval in minute for trigger next run
-
-### Start Program
-
-```bash
-npm start
-```
-
-## Example
-
-```javascript
-const { tasks } = require('./config');
-const HarGenerator = require('./harGenerator');
-
-tasks.forEach(options => {
-    const harGen = new HarGenerator(options);
-    harGen.start();
-})
-```
