@@ -19,7 +19,7 @@ npm install har-generator
 ### Example
 
 ```javascript
-const HarGenerator = require('./harGenerator');
+const HarGenerator = require('harGenerator');
 const options = {
     url: 'https://www.188bet.co.uk/',
     harFolder: 'normal',
