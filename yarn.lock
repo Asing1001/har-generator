@@ -37,21 +37,17 @@ chrome-har-capturer@^0.10.3:
     commander "2.x.x"
 
 chrome-remote-interface@>=0.23.0:
-  version "0.25.2"
-  resolved "https://registry.yarnpkg.com/chrome-remote-interface/-/chrome-remote-interface-0.25.2.tgz#f20b9d6e60cab13fcfa43ec8ab212cb9ed9a9d73"
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/chrome-remote-interface/-/chrome-remote-interface-0.25.3.tgz#b692ae538cd5af3a6dd285636bfab3d29a7006c1"
   dependencies:
-    commander "2.1.x"
-    ws "3.2.x"
+    commander "2.11.x"
+    ws "3.3.x"
 
 colors@1.0.x:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-commander@2.1.x:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.1.0.tgz#d121bbae860d9992a3d517ba96f56588e47c6781"
-
-commander@2.x.x:
+commander@2.11.x, commander@2.x.x:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
@@ -88,8 +84,8 @@ mkdirp@0.5.1:
     minimist "0.0.8"
 
 moment@^2.19.1:
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.2.tgz#8a7f774c95a64550b4c7ebd496683908f9419dbe"
 
 safe-buffer@~5.1.0:
   version "5.1.1"
@@ -130,9 +126,9 @@ winston@^2.4.0:
     isstream "0.1.x"
     stack-trace "0.0.x"
 
-ws@3.2.x:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-3.2.0.tgz#d5d3d6b11aff71e73f808f40cc69d52bb6d4a185"
+ws@3.3.x:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.1.tgz#d97e34dee06a1190c61ac1e95f43cb60b78cf939"
   dependencies:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
